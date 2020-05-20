@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+.vscode/
+yarn.lock
+example.env
+.env
+combined.log
+error.log
