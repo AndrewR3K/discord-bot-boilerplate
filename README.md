@@ -3,6 +3,13 @@
 
 > Well, a Node.js Discord bot boilerplate... Beep B00p
 
+## Features
+* Hot Reload
+* Better Logs
+* Production Ready!
+* Production Code Minification (Compress, Mangle)
+* API connector (Coming Soon)
+
 ## Installation
 
 ```bash
