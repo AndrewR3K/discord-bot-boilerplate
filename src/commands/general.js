@@ -1,13 +1,13 @@
 const pckg = require('../../package.json') 
 module.exports = {
-    helloWorld: function (payload) {
-        payload.message.channel.send(`hello ${payload.user}!`)
+    helloWorld: function () {
+      this.message.channel.send(`hello ${this.user}!`)
     },
-    pingMe: async function (payload) {
-      const m = await payload.message.channel.send("\`\`\`Pinging...\`\`\`")
-      m.edit(`\`\`\`My Latency is ${m.createdTimestamp - payload.message.createdTimestamp}ms. Latency is ${Math.round(payload.client.ping)}ms\`\`\``)
+    pingMe: async function () {
+      const m = await this.message.channel.send("\`\`\`Pinging...\`\`\`")
+      m.edit(`\`\`\`My Latency is ${m.createdTimestamp - this.message.createdTimestamp}ms. Latency is ${Math.round(this.client.ping)}ms\`\`\``)
     },
-    botInfo: function (payload) {
+    botInfo: function () {
       let v = pckg.version || '0.1.0'
       let auth = pckg.author || ''
       let description = pckg.description || 'Beep Bo0P'
@@ -31,6 +31,6 @@ module.exports = {
           ]
         }
       }
-      payload.message.channel.send(msg)
+      this.message.channel.send(msg)
     },
 };

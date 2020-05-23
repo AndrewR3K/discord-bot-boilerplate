@@ -14,27 +14,20 @@ class Run {
     constructor() {
         this.logger = Logger
         try {
-            // TODO: Create a better way to make the context global accross all files
             this.client = new Discord.Client()
             this.welcome_channel = 'Welcome'
+            
+            // Maintain Function Context
             this.getUserData = this._getUserData.bind(this)
-            this.messageFormatter = this._messageFormatter.bind(this)
+            
+            // Maintain Router Context
+            this.router = Router.bind(this)
+
+            // Initialize Bot
             this._install = this._install.bind(this)
             this._install()
         } catch (e) {
             Logger.error(e)
-        }
-    }
-    async _messageFormatter (message) {
-        // Segment commands by the prefix
-        const args = message.content.slice(config.prefix.length).trim().split(/ +/g)
-        const command = args.shift().toLowerCase()
-        return {
-            user: await this.getUserData(message),
-            args: args,
-            command: command,
-            message: message,
-            client: this.client
         }
     }
     async _getUserData (message) {
@@ -56,9 +49,14 @@ class Run {
             // Ignore non prefixed messages
             if(message.content.indexOf(config.prefix) !== 0) return
 
-            // Format the message
-            let payload = await this.messageFormatter(message)
-            new Router(payload)
+            // Add message data to context
+            this.message = message
+            this.args = message.content.slice(config.prefix.length).trim().split(/ +/g)
+            this.command = this.args.shift().toLowerCase()
+            this.user =  await this.getUserData(message)
+
+            // Initiate Router
+            this.router()
             
             // Welcome Message on new server member.
             this.client.on('guildMemberAdd', member => {
