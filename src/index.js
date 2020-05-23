@@ -1,7 +1,4 @@
 // This is the root runtime File
-require("@babel/register")({
-    presets: ["@babel/preset-env"]
-});
 
 // Import Compontents
 import Discord from 'discord.js'

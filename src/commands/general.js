@@ -11,7 +11,7 @@ module.exports = {
       let v = pckg.version || '0.1.0'
       let auth = pckg.author || ''
       let description = pckg.description || 'Beep Bo0P'
-      let msg = {embed: {
+      let msg = { embed: {
           color: 3447003,
           title: `Made with <3 in CA, USA ${process.env.NODE_ENV === 'development' ? '<<<< DEVELOPMENT MODE ON 🤙 >>>>' : ''}`,
           description: ``,

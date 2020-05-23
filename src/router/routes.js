@@ -1,8 +1,8 @@
 import {helloWorld, pingMe, botInfo} from '../commands/general'
-
-module.exports = {
+var routes = {
     'hello': helloWorld,
     'ping': pingMe,
     'version': botInfo,
     'v': botInfo
 }
+module.exports = routes 
