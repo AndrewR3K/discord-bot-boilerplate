@@ -44,4 +44,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 * Context improvements
 
 ## License
-[MIT](https://github.com/AndrewR3K/evebot/blob/master/LICENSE)
+[MIT](https://github.com/AndrewR3K/discord-bot-boilerplate/blob/master/LICENSE)
