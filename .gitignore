@@ -4,6 +4,7 @@ dist/
 npm-debug.log
 .vscode/
 yarn.lock
+yarn-error.log
 example.env
 .env
 combined.log
