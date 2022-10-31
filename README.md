@@ -1,14 +1,17 @@
 
 # Node.js Discord Bot Boilerplate
 
-> Well, a Node.js Discord bot boilerplate... Beep B00p
+> A discord.js (v15.*+) boilerplate to make gettign started with Discord.js easier!
 
 ## Features
 * Hot Reload
 * Better Logs
 * Production Ready!
-* Production Code Minification (Compress, Mangle)
-* API connector (Coming Soon)
+* Production Code Minification (Compress, Mangle) [Coming soon]
+* API connector [Coming soon]
+* UI interface [Coming soon]
+* Discord JS Slash Commands
+* 
 
 ## Installation
 
@@ -21,7 +24,8 @@ You will need to setup an environment file with the following:
 
 ```
 TOKEN=<Your Discord token>
-NODE_ENV=development
+CLIENT_ID=<Your Discord Client ID>
+GUILD_ID=<Your Discord Guild ID (for single command pushes)>
 ```
 
 ## Build - Development
@@ -39,9 +43,4 @@ $ yarn start
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## TO-DO
-* Add Caching
-* Context improvements
-
 ## License
-[MIT](https://github.com/AndrewR3K/discord-bot-boilerplate/blob/master/LICENSE)

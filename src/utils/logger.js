@@ -1,7 +1,8 @@
-// TODO: Turn this into an object class and expost to the apps core context
 const { createLogger, format, transports, addColors } = require('winston');
 const { combine, timestamp, printf, prettyPrint } = format;
-const pkg = require('../package.json')
+const pkg = require('../../package.json')
+
+// TODO: Fix error stacktrace not showing
 
 const logFormat = printf(info => {
   return `[${info.timestamp}-v${info.Version}-${info.Environment}] ${info.level}: ${info.message}`;
