@@ -11,7 +11,6 @@
 * API connector [Coming soon]
 * UI interface [Coming soon]
 * Discord JS Slash Commands
-* 
 
 ## Installation
 
@@ -44,3 +43,4 @@ $ yarn start
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
+[GNU General Public License v3.0]()
