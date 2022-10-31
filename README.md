@@ -43,4 +43,4 @@ $ yarn start
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-[GNU General Public License v3.0]()
+[GNU General Public License v3.0](https://github.com/AndrewR3K/discord-bot-boilerplate/blob/master/LICENSE)
